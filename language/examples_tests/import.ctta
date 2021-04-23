@@ -1,0 +1,3 @@
+import "hello.lib";
+import "somelib";
+import "xx";

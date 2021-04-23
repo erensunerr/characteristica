@@ -1,0 +1,4 @@
+axiom {X = Y};
+stat somename {X + 5};
+axiom somename, {a - b = 10};
+axiom a, b, c,d, {x=y};

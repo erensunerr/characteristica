@@ -1,0 +1,15 @@
+tactic t_1.new(A, B, C) (
+    {A = B},
+    {B = C}
+)(
+    {A = C}
+);
+
+stat specStat {(X + Y)/Z = Q};
+
+tactic t_2.v3(X, Y, Z) (
+    specStat
+) (
+    {X = Y},
+    {Z = X/Q}
+);

@@ -1,0 +1,3 @@
+stat some_name {X = 4};
+stat otherName {Y+X = 12};
+stat xx {f(l/4) = z^2/4};

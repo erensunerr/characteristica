@@ -1,0 +1,35 @@
+# comment
+
+import "somelib";
+
+stat something {A \in sets};
+
+tactic t_1 (A, B, C) (
+    something,
+    {B \in sets}, # requirements
+    {A U B = C}
+) (
+    {C = B U A} # implications
+);
+
+stat one {X \in sets};
+axiom one;
+axiom {Y \in sets};
+stat eulers_axiom {X U Y = none};
+axiom eulers_axiom;
+stat end {none = Y U X};
+
+t_1(X, Y, none)(
+    one, two, eulers_axiom
+)(
+    end
+);
+
+
+tactic t_2 (A, B) (
+    {none = A U B}
+)(
+    {A = none}
+);
+
+stat end_other {Y = none};

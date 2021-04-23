@@ -1,9 +1,0 @@
-lemma_1:
-    a \in integers
-    b \in integers
-    a*b=0   =>  a=0
-
-let c, d in integers
-
-c*d = 0
-c = 0 ; lemma_1(a=c, b=d)
