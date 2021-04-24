@@ -10,7 +10,7 @@ prog        :
 
 impr        :   'import' '"' lib=NAME '"' ';';
 stat        :   'stat' NAME STATEMENT ';';
-axiom       :   'axiom' toAssume=args ';';
+axiom       :   'axiom' NAME ';';
 
 tactic      :   'tactic' tacticCall;
 
@@ -21,7 +21,7 @@ tacticCall  :   NAME
             ;
 
 arg         :   (NAME | STATEMENT);
-args        :   arg(COMMA arg)*?;
+args        :   arg (COMMA arg)*?;
 
 
 
@@ -30,5 +30,3 @@ WS          :   [ \t\n\r]+? -> skip;
 STATEMENT   :   '{' .*? '}';
 NAME        :   [a-zA-Z][a-zA-Z._1-9]*;
 COMMA       :   ',';
-
-

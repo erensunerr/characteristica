@@ -14,7 +14,8 @@ tactic t_1 (A, B, C) (
 
 stat one {X \in sets};
 axiom one;
-axiom {Y \in sets};
+stat two {Y \in sets};
+axiom two;
 stat eulers_axiom {X U Y = none};
 axiom eulers_axiom;
 stat end {none = Y U X};
@@ -25,11 +26,3 @@ t_1(X, Y, none)(
     end
 );
 
-
-tactic t_2 (A, B) (
-    {none = A U B}
-)(
-    {A = none}
-);
-
-stat end_other {Y = none};

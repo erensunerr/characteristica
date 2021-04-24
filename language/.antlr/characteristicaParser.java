@@ -273,10 +273,7 @@ public class characteristicaParser extends Parser {
 	}
 
 	public static class AxiomContext extends ParserRuleContext {
-		public ArgsContext toAssume;
-		public ArgsContext args() {
-			return getRuleContext(ArgsContext.class,0);
-		}
+		public TerminalNode NAME() { return getToken(characteristicaParser.NAME, 0); }
 		public AxiomContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -292,7 +289,7 @@ public class characteristicaParser extends Parser {
 			setState(38);
 			match(T__4);
 			setState(39);
-			((AxiomContext)_localctx).toAssume = args();
+			match(NAME);
 			setState(40);
 			match(T__2);
 			}
@@ -508,7 +505,7 @@ public class characteristicaParser extends Parser {
 		"\2\31\27\3\2\2\2\31\32\3\2\2\2\32\33\3\2\2\2\33\34\7\2\2\3\34\3\3\2\2"+
 		"\2\35\36\7\3\2\2\36\37\7\4\2\2\37 \7\16\2\2 !\7\4\2\2!\"\7\5\2\2\"\5\3"+
 		"\2\2\2#$\7\6\2\2$%\7\16\2\2%&\7\r\2\2&\'\7\5\2\2\'\7\3\2\2\2()\7\7\2\2"+
-		")*\5\20\t\2*+\7\5\2\2+\t\3\2\2\2,-\7\b\2\2-.\5\f\7\2.\13\3\2\2\2/\60\7"+
+		")*\7\16\2\2*+\7\5\2\2+\t\3\2\2\2,-\7\b\2\2-.\5\f\7\2.\13\3\2\2\2/\60\7"+
 		"\16\2\2\60\61\7\t\2\2\61\62\5\20\t\2\62\63\7\n\2\2\63\64\7\t\2\2\64\65"+
 		"\5\20\t\2\65\66\7\n\2\2\66\67\7\t\2\2\678\5\20\t\289\7\n\2\29:\7\5\2\2"+
 		":\r\3\2\2\2;<\t\2\2\2<\17\3\2\2\2=B\5\16\b\2>?\7\17\2\2?A\5\16\b\2@>\3"+
