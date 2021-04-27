@@ -1,4 +1,4 @@
-# Generated from language/characteristica.g4 by ANTLR 4.9.2
+# Generated from characteristica.g4 by ANTLR 4.9.2
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .characteristicaParser import characteristicaParser
@@ -29,13 +29,13 @@ class characteristicaVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by characteristicaParser#tactic.
-    def visitTactic(self, ctx:characteristicaParser.TacticContext):
+    # Visit a parse tree produced by characteristicaParser#tacticCall.
+    def visitTacticCall(self, ctx:characteristicaParser.TacticCallContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by characteristicaParser#tacticCall.
-    def visitTacticCall(self, ctx:characteristicaParser.TacticCallContext):
+    # Visit a parse tree produced by characteristicaParser#tactic.
+    def visitTactic(self, ctx:characteristicaParser.TacticContext):
         return self.visitChildren(ctx)
 
 

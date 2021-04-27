@@ -1,9 +1,13 @@
-from utils import logger
+try:
+    from internals.utils import logger
+except:
+    from utils import logger
+
 class Statement:
-    def __init__(self, literal, name, isAxiom=False):
+    def __init__(self, literal, name):
         self.literal    = literal
         self.name       = name
-        self.isVerified = isAxiom # if axiom assume it is true
+        self.isVerified = False
         self.reqOf      = []
         self.resOf      = []
         logger.debug(f"{self} initialized.")

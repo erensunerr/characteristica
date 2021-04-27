@@ -37,16 +37,6 @@ public interface characteristicaListener extends ParseTreeListener {
 	 */
 	void exitStat(characteristicaParser.StatContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link characteristicaParser#tactic}.
-	 * @param ctx the parse tree
-	 */
-	void enterTactic(characteristicaParser.TacticContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link characteristicaParser#tactic}.
-	 * @param ctx the parse tree
-	 */
-	void exitTactic(characteristicaParser.TacticContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link characteristicaParser#axiom}.
 	 * @param ctx the parse tree
 	 */
@@ -66,6 +56,16 @@ public interface characteristicaListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitTacticCall(characteristicaParser.TacticCallContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link characteristicaParser#tactic}.
+	 * @param ctx the parse tree
+	 */
+	void enterTactic(characteristicaParser.TacticContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link characteristicaParser#tactic}.
+	 * @param ctx the parse tree
+	 */
+	void exitTactic(characteristicaParser.TacticContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link characteristicaParser#arg}.
 	 * @param ctx the parse tree

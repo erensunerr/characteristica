@@ -1,4 +1,4 @@
-# Generated from language/characteristica.g4 by ANTLR 4.9.2
+# Generated from characteristica.g4 by ANTLR 4.9.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -11,28 +11,29 @@ else:
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\17")
-        buf.write("F\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b")
-        buf.write("\t\b\4\t\t\t\3\2\3\2\3\2\3\2\3\2\6\2\30\n\2\r\2\16\2\31")
-        buf.write("\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\4\3\4\3\4\3\4\3\4\3")
-        buf.write("\5\3\5\3\5\3\5\3\6\3\6\3\6\3\7\3\7\3\7\3\7\3\7\3\7\3\7")
-        buf.write("\3\7\3\7\3\7\3\7\3\7\3\b\3\b\3\t\3\t\3\t\7\tA\n\t\f\t")
-        buf.write("\16\tD\13\t\3\t\3B\2\n\2\4\6\b\n\f\16\20\2\3\3\2\r\16")
-        buf.write("\2C\2\27\3\2\2\2\4\35\3\2\2\2\6#\3\2\2\2\b(\3\2\2\2\n")
-        buf.write(",\3\2\2\2\f/\3\2\2\2\16;\3\2\2\2\20=\3\2\2\2\22\30\5\4")
-        buf.write("\3\2\23\30\5\6\4\2\24\30\5\b\5\2\25\30\5\n\6\2\26\30\5")
-        buf.write("\f\7\2\27\22\3\2\2\2\27\23\3\2\2\2\27\24\3\2\2\2\27\25")
-        buf.write("\3\2\2\2\27\26\3\2\2\2\30\31\3\2\2\2\31\27\3\2\2\2\31")
-        buf.write("\32\3\2\2\2\32\33\3\2\2\2\33\34\7\2\2\3\34\3\3\2\2\2\35")
-        buf.write("\36\7\3\2\2\36\37\7\4\2\2\37 \7\16\2\2 !\7\4\2\2!\"\7")
-        buf.write("\5\2\2\"\5\3\2\2\2#$\7\6\2\2$%\7\16\2\2%&\7\r\2\2&\'\7")
-        buf.write("\5\2\2\'\7\3\2\2\2()\7\7\2\2)*\5\20\t\2*+\7\5\2\2+\t\3")
-        buf.write("\2\2\2,-\7\b\2\2-.\5\f\7\2.\13\3\2\2\2/\60\7\16\2\2\60")
-        buf.write("\61\7\t\2\2\61\62\5\20\t\2\62\63\7\n\2\2\63\64\7\t\2\2")
-        buf.write("\64\65\5\20\t\2\65\66\7\n\2\2\66\67\7\t\2\2\678\5\20\t")
-        buf.write("\289\7\n\2\29:\7\5\2\2:\r\3\2\2\2;<\t\2\2\2<\17\3\2\2")
-        buf.write("\2=B\5\16\b\2>?\7\17\2\2?A\5\16\b\2@>\3\2\2\2AD\3\2\2")
-        buf.write("\2BC\3\2\2\2B@\3\2\2\2C\21\3\2\2\2DB\3\2\2\2\5\27\31B")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\20")
+        buf.write("G\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b")
+        buf.write("\t\b\4\t\t\t\3\2\3\2\3\2\3\2\3\2\7\2\30\n\2\f\2\16\2\33")
+        buf.write("\13\2\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\4\3\4\3\4\3\4")
+        buf.write("\3\4\3\5\3\5\3\5\3\5\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3")
+        buf.write("\6\3\6\3\6\3\6\3\7\3\7\3\7\3\b\3\b\3\t\3\t\3\t\7\tB\n")
+        buf.write("\t\f\t\16\tE\13\t\3\t\3C\2\n\2\4\6\b\n\f\16\20\2\2\2D")
+        buf.write("\2\31\3\2\2\2\4\36\3\2\2\2\6$\3\2\2\2\b)\3\2\2\2\n-\3")
+        buf.write("\2\2\2\f9\3\2\2\2\16<\3\2\2\2\20>\3\2\2\2\22\30\5\4\3")
+        buf.write("\2\23\30\5\6\4\2\24\30\5\b\5\2\25\30\5\f\7\2\26\30\5\n")
+        buf.write("\6\2\27\22\3\2\2\2\27\23\3\2\2\2\27\24\3\2\2\2\27\25\3")
+        buf.write("\2\2\2\27\26\3\2\2\2\30\33\3\2\2\2\31\27\3\2\2\2\31\32")
+        buf.write("\3\2\2\2\32\34\3\2\2\2\33\31\3\2\2\2\34\35\7\2\2\3\35")
+        buf.write("\3\3\2\2\2\36\37\7\3\2\2\37 \7\4\2\2 !\7\17\2\2!\"\7\4")
+        buf.write("\2\2\"#\7\5\2\2#\5\3\2\2\2$%\7\6\2\2%&\7\16\2\2&\'\7\r")
+        buf.write("\2\2\'(\7\5\2\2(\7\3\2\2\2)*\7\7\2\2*+\7\16\2\2+,\7\5")
+        buf.write("\2\2,\t\3\2\2\2-.\7\16\2\2./\7\b\2\2/\60\5\20\t\2\60\61")
+        buf.write("\7\t\2\2\61\62\7\b\2\2\62\63\5\20\t\2\63\64\7\t\2\2\64")
+        buf.write("\65\7\b\2\2\65\66\5\20\t\2\66\67\7\t\2\2\678\7\5\2\28")
+        buf.write("\13\3\2\2\29:\7\n\2\2:;\5\n\6\2;\r\3\2\2\2<=\7\16\2\2")
+        buf.write("=\17\3\2\2\2>C\5\16\b\2?@\7\20\2\2@B\5\16\b\2A?\3\2\2")
+        buf.write("\2BE\3\2\2\2CD\3\2\2\2CA\3\2\2\2D\21\3\2\2\2EC\3\2\2\2")
+        buf.write("\5\27\31C")
         return buf.getvalue()
 
 
@@ -47,24 +48,24 @@ class characteristicaParser ( Parser ):
     sharedContextCache = PredictionContextCache()
 
     literalNames = [ "<INVALID>", "'import'", "'\"'", "';'", "'stat'", "'axiom'", 
-                     "'tactic'", "'('", "')'", "<INVALID>", "<INVALID>", 
-                     "<INVALID>", "<INVALID>", "','" ]
+                     "'('", "')'", "'tactic'", "<INVALID>", "<INVALID>", 
+                     "<INVALID>", "<INVALID>", "<INVALID>", "','" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "COMMENT", "WS", "STATEMENT", "NAME", 
-                      "COMMA" ]
+                      "IMPR_NAME", "COMMA" ]
 
     RULE_prog = 0
     RULE_impr = 1
     RULE_stat = 2
     RULE_axiom = 3
-    RULE_tactic = 4
-    RULE_tacticCall = 5
+    RULE_tacticCall = 4
+    RULE_tactic = 5
     RULE_arg = 6
     RULE_args = 7
 
-    ruleNames =  [ "prog", "impr", "stat", "axiom", "tactic", "tacticCall", 
+    ruleNames =  [ "prog", "impr", "stat", "axiom", "tacticCall", "tactic", 
                    "arg", "args" ]
 
     EOF = Token.EOF
@@ -80,7 +81,8 @@ class characteristicaParser ( Parser ):
     WS=10
     STATEMENT=11
     NAME=12
-    COMMA=13
+    IMPR_NAME=13
+    COMMA=14
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -155,10 +157,10 @@ class characteristicaParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 21 
+            self.state = 23
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while True:
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << characteristicaParser.T__0) | (1 << characteristicaParser.T__3) | (1 << characteristicaParser.T__4) | (1 << characteristicaParser.T__7) | (1 << characteristicaParser.NAME))) != 0):
                 self.state = 21
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
@@ -174,7 +176,7 @@ class characteristicaParser ( Parser ):
                     self.state = 18
                     self.axiom()
                     pass
-                elif token in [characteristicaParser.T__5]:
+                elif token in [characteristicaParser.T__7]:
                     self.state = 19
                     self.tactic()
                     pass
@@ -185,13 +187,11 @@ class characteristicaParser ( Parser ):
                 else:
                     raise NoViableAltException(self)
 
-                self.state = 23 
+                self.state = 25
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << characteristicaParser.T__0) | (1 << characteristicaParser.T__3) | (1 << characteristicaParser.T__4) | (1 << characteristicaParser.T__5) | (1 << characteristicaParser.NAME))) != 0)):
-                    break
 
-            self.state = 25
+            self.state = 26
             self.match(characteristicaParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
@@ -210,8 +210,8 @@ class characteristicaParser ( Parser ):
             self.parser = parser
             self.lib = None # Token
 
-        def NAME(self):
-            return self.getToken(characteristicaParser.NAME, 0)
+        def IMPR_NAME(self):
+            return self.getToken(characteristicaParser.IMPR_NAME, 0)
 
         def getRuleIndex(self):
             return characteristicaParser.RULE_impr
@@ -231,15 +231,15 @@ class characteristicaParser ( Parser ):
         self.enterRule(localctx, 2, self.RULE_impr)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 27
-            self.match(characteristicaParser.T__0)
             self.state = 28
-            self.match(characteristicaParser.T__1)
+            self.match(characteristicaParser.T__0)
             self.state = 29
-            localctx.lib = self.match(characteristicaParser.NAME)
-            self.state = 30
             self.match(characteristicaParser.T__1)
+            self.state = 30
+            localctx.lib = self.match(characteristicaParser.IMPR_NAME)
             self.state = 31
+            self.match(characteristicaParser.T__1)
+            self.state = 32
             self.match(characteristicaParser.T__2)
         except RecognitionException as re:
             localctx.exception = re
@@ -281,13 +281,13 @@ class characteristicaParser ( Parser ):
         self.enterRule(localctx, 4, self.RULE_stat)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 33
-            self.match(characteristicaParser.T__3)
             self.state = 34
-            self.match(characteristicaParser.NAME)
+            self.match(characteristicaParser.T__3)
             self.state = 35
-            self.match(characteristicaParser.STATEMENT)
+            self.match(characteristicaParser.NAME)
             self.state = 36
+            self.match(characteristicaParser.STATEMENT)
+            self.state = 37
             self.match(characteristicaParser.T__2)
         except RecognitionException as re:
             localctx.exception = re
@@ -304,11 +304,9 @@ class characteristicaParser ( Parser ):
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
-            self.toAssume = None # ArgsContext
 
-        def args(self):
-            return self.getTypedRuleContext(characteristicaParser.ArgsContext,0)
-
+        def NAME(self):
+            return self.getToken(characteristicaParser.NAME, 0)
 
         def getRuleIndex(self):
             return characteristicaParser.RULE_axiom
@@ -328,54 +326,12 @@ class characteristicaParser ( Parser ):
         self.enterRule(localctx, 6, self.RULE_axiom)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 38
-            self.match(characteristicaParser.T__4)
             self.state = 39
-            localctx.toAssume = self.args()
+            self.match(characteristicaParser.T__4)
             self.state = 40
+            self.match(characteristicaParser.NAME)
+            self.state = 41
             self.match(characteristicaParser.T__2)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class TacticContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def tacticCall(self):
-            return self.getTypedRuleContext(characteristicaParser.TacticCallContext,0)
-
-
-        def getRuleIndex(self):
-            return characteristicaParser.RULE_tactic
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTactic" ):
-                return visitor.visitTactic(self)
-            else:
-                return visitor.visitChildren(self)
-
-
-
-
-    def tactic(self):
-
-        localctx = characteristicaParser.TacticContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 8, self.RULE_tactic)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 42
-            self.match(characteristicaParser.T__5)
-            self.state = 43
-            self.tacticCall()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -420,31 +376,73 @@ class characteristicaParser ( Parser ):
     def tacticCall(self):
 
         localctx = characteristicaParser.TacticCallContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 10, self.RULE_tacticCall)
+        self.enterRule(localctx, 8, self.RULE_tacticCall)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 45
+            self.state = 43
             self.match(characteristicaParser.NAME)
+            self.state = 44
+            self.match(characteristicaParser.T__5)
+            self.state = 45
+            localctx.variables = self.args()
             self.state = 46
             self.match(characteristicaParser.T__6)
             self.state = 47
-            localctx.variables = self.args()
+            self.match(characteristicaParser.T__5)
             self.state = 48
-            self.match(characteristicaParser.T__7)
+            localctx.requirements = self.args()
             self.state = 49
             self.match(characteristicaParser.T__6)
             self.state = 50
-            localctx.requirements = self.args()
+            self.match(characteristicaParser.T__5)
             self.state = 51
-            self.match(characteristicaParser.T__7)
+            localctx.results = self.args()
             self.state = 52
             self.match(characteristicaParser.T__6)
             self.state = 53
-            localctx.results = self.args()
-            self.state = 54
-            self.match(characteristicaParser.T__7)
-            self.state = 55
             self.match(characteristicaParser.T__2)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class TacticContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def tacticCall(self):
+            return self.getTypedRuleContext(characteristicaParser.TacticCallContext,0)
+
+
+        def getRuleIndex(self):
+            return characteristicaParser.RULE_tactic
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitTactic" ):
+                return visitor.visitTactic(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def tactic(self):
+
+        localctx = characteristicaParser.TacticContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 10, self.RULE_tactic)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 55
+            self.match(characteristicaParser.T__7)
+            self.state = 56
+            self.tacticCall()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -464,9 +462,6 @@ class characteristicaParser ( Parser ):
         def NAME(self):
             return self.getToken(characteristicaParser.NAME, 0)
 
-        def STATEMENT(self):
-            return self.getToken(characteristicaParser.STATEMENT, 0)
-
         def getRuleIndex(self):
             return characteristicaParser.RULE_arg
 
@@ -483,16 +478,10 @@ class characteristicaParser ( Parser ):
 
         localctx = characteristicaParser.ArgContext(self, self._ctx, self.state)
         self.enterRule(localctx, 12, self.RULE_arg)
-        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 57
-            _la = self._input.LA(1)
-            if not(_la==characteristicaParser.STATEMENT or _la==characteristicaParser.NAME):
-                self._errHandler.recoverInline(self)
-            else:
-                self._errHandler.reportMatch(self)
-                self.consume()
+            self.state = 58
+            self.match(characteristicaParser.NAME)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -540,18 +529,18 @@ class characteristicaParser ( Parser ):
         self.enterRule(localctx, 14, self.RULE_args)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 59
+            self.state = 60
             self.arg()
-            self.state = 64
+            self.state = 65
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,2,self._ctx)
             while _alt!=1 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1+1:
-                    self.state = 60
-                    self.match(characteristicaParser.COMMA)
                     self.state = 61
+                    self.match(characteristicaParser.COMMA)
+                    self.state = 62
                     self.arg() 
-                self.state = 66
+                self.state = 67
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,2,self._ctx)
 

@@ -1,4 +1,9 @@
-from utils import logger
+try:
+    from internals.utils import logger
+except:
+    from utils import logger
+
+    
 class Tactic:
     def __init__(self, name, variables:list, requirements:list,
                  results:list, verify=None):
@@ -6,11 +11,11 @@ class Tactic:
         self.variables      = variables
         self.requirements   = requirements
         self.results        = results
-        self.verify         = verify
-        logger.debug(f"{self.name} initialized.")
+        self.verify         = verify # custom verifier function
+        logger.debug(f"{self} initialized.")
     
     def __repr__(self):
-        return f"tactic -> {self.name}({', '.join(self.variables)})"
+        return f"Tactic -> {self.name}({', '.join(self.variables)})"
 
 class TacticCall:
     def __init__(self, tactic, callVars, callReqs, callRes):
@@ -28,11 +33,8 @@ class TacticCall:
     def verify(self):
         logger.debug(f"{self} is being verified.")
         if self.tactic.verify:
-            logger.debug(f"{self} is using a custom verifier.")
-            self.isVerified = self.tactic.verify(
-                                        self.tactic.variables, self.tactic.requirements, self.tactic.results,
-                                        self.callVars,  self.callReqs,     self.callRes
-                                    )
+            logger.debug(f"{self} is using custom verifier: {self.tactic.verifier.__name__}.")
+            self.isVerified = self.tactic.verify(self)
         else:
             true_or_not = True
             for screq, sreq in zip(self.callReqs, self.tactic.requirements):
@@ -41,6 +43,7 @@ class TacticCall:
                 for cvar, var in zip(self.callVars, self.tactic.variables):
                     creq = creq.replace(cvar, var)
                 true_or_not = true_or_not and (creq == req)
+            self.isVerified = true_or_not
 
         for res in self.callRes:
             res.isVerified = self.isVerified
@@ -49,11 +52,12 @@ class TacticCall:
 
 
     def __repr__(self):
-        return f"tactic call -> {self.name}({', '.join(self.callVars)})"
+        return f"Tactic call -> {self.tactic.name}({', '.join(self.callVars)})"
 
 if __name__=='__main__':
     from statement import Statement
     t1 = Tactic(
+        "tacName",
         ['A', 'B', 'C'],
         [
             Statement('A=B*C'   , '__0'),

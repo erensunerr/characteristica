@@ -17,28 +17,28 @@ public class characteristicaParser extends Parser {
 		new PredictionContextCache();
 	public static final int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, COMMENT=9, 
-		WS=10, STATEMENT=11, NAME=12, COMMA=13;
+		WS=10, STATEMENT=11, NAME=12, IMPR_NAME=13, COMMA=14;
 	public static final int
-		RULE_prog = 0, RULE_impr = 1, RULE_stat = 2, RULE_axiom = 3, RULE_tactic = 4, 
-		RULE_tacticCall = 5, RULE_arg = 6, RULE_args = 7;
+		RULE_prog = 0, RULE_impr = 1, RULE_stat = 2, RULE_axiom = 3, RULE_tacticCall = 4, 
+		RULE_tactic = 5, RULE_arg = 6, RULE_args = 7;
 	private static String[] makeRuleNames() {
 		return new String[] {
-			"prog", "impr", "stat", "axiom", "tactic", "tacticCall", "arg", "args"
+			"prog", "impr", "stat", "axiom", "tacticCall", "tactic", "arg", "args"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'import'", "'\"'", "';'", "'stat'", "'axiom'", "'tactic'", "'('", 
-			"')'", null, null, null, null, "','"
+			null, "'import'", "'\"'", "';'", "'stat'", "'axiom'", "'('", "')'", "'tactic'", 
+			null, null, null, null, null, "','"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
 			null, null, null, null, null, null, null, null, null, "COMMENT", "WS", 
-			"STATEMENT", "NAME", "COMMA"
+			"STATEMENT", "NAME", "IMPR_NAME", "COMMA"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -137,10 +137,10 @@ public class characteristicaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(21); 
+			setState(23);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			do {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__3) | (1L << T__4) | (1L << T__7) | (1L << NAME))) != 0)) {
 				{
 				setState(21);
 				_errHandler.sync(this);
@@ -163,7 +163,7 @@ public class characteristicaParser extends Parser {
 					axiom();
 					}
 					break;
-				case T__5:
+				case T__7:
 					{
 					setState(19);
 					tactic();
@@ -179,11 +179,11 @@ public class characteristicaParser extends Parser {
 					throw new NoViableAltException(this);
 				}
 				}
-				setState(23); 
+				setState(25);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__3) | (1L << T__4) | (1L << T__5) | (1L << NAME))) != 0) );
-			setState(25);
+			}
+			setState(26);
 			match(EOF);
 			}
 		}
@@ -200,7 +200,7 @@ public class characteristicaParser extends Parser {
 
 	public static class ImprContext extends ParserRuleContext {
 		public Token lib;
-		public TerminalNode NAME() { return getToken(characteristicaParser.NAME, 0); }
+		public TerminalNode IMPR_NAME() { return getToken(characteristicaParser.IMPR_NAME, 0); }
 		public ImprContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -213,15 +213,15 @@ public class characteristicaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(27);
-			match(T__0);
 			setState(28);
-			match(T__1);
+			match(T__0);
 			setState(29);
-			((ImprContext)_localctx).lib = match(NAME);
-			setState(30);
 			match(T__1);
+			setState(30);
+			((ImprContext)_localctx).lib = match(IMPR_NAME);
 			setState(31);
+			match(T__1);
+			setState(32);
 			match(T__2);
 			}
 		}
@@ -251,13 +251,13 @@ public class characteristicaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(33);
-			match(T__3);
 			setState(34);
-			match(NAME);
+			match(T__3);
 			setState(35);
-			match(STATEMENT);
+			match(NAME);
 			setState(36);
+			match(STATEMENT);
+			setState(37);
 			match(T__2);
 			}
 		}
@@ -286,45 +286,12 @@ public class characteristicaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(38);
-			match(T__4);
 			setState(39);
-			match(NAME);
+			match(T__4);
 			setState(40);
+			match(NAME);
+			setState(41);
 			match(T__2);
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			_errHandler.reportError(this, re);
-			_errHandler.recover(this, re);
-		}
-		finally {
-			exitRule();
-		}
-		return _localctx;
-	}
-
-	public static class TacticContext extends ParserRuleContext {
-		public TacticCallContext tacticCall() {
-			return getRuleContext(TacticCallContext.class,0);
-		}
-		public TacticContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_tactic; }
-	}
-
-	public final TacticContext tactic() throws RecognitionException {
-		TacticContext _localctx = new TacticContext(_ctx, getState());
-		enterRule(_localctx, 8, RULE_tactic);
-		try {
-			enterOuterAlt(_localctx, 1);
-			{
-			setState(42);
-			match(T__5);
-			setState(43);
-			tacticCall();
 			}
 		}
 		catch (RecognitionException re) {
@@ -357,32 +324,65 @@ public class characteristicaParser extends Parser {
 
 	public final TacticCallContext tacticCall() throws RecognitionException {
 		TacticCallContext _localctx = new TacticCallContext(_ctx, getState());
-		enterRule(_localctx, 10, RULE_tacticCall);
+		enterRule(_localctx, 8, RULE_tacticCall);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(45);
+			setState(43);
 			match(NAME);
+			setState(44);
+			match(T__5);
+			setState(45);
+			((TacticCallContext)_localctx).variables = args();
 			setState(46);
 			match(T__6);
 			setState(47);
-			((TacticCallContext)_localctx).variables = args();
+			match(T__5);
 			setState(48);
-			match(T__7);
+			((TacticCallContext)_localctx).requirements = args();
 			setState(49);
 			match(T__6);
 			setState(50);
-			((TacticCallContext)_localctx).requirements = args();
+			match(T__5);
 			setState(51);
-			match(T__7);
+			((TacticCallContext)_localctx).results = args();
 			setState(52);
 			match(T__6);
 			setState(53);
-			((TacticCallContext)_localctx).results = args();
-			setState(54);
-			match(T__7);
-			setState(55);
 			match(T__2);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class TacticContext extends ParserRuleContext {
+		public TacticCallContext tacticCall() {
+			return getRuleContext(TacticCallContext.class,0);
+		}
+		public TacticContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_tactic; }
+	}
+
+	public final TacticContext tactic() throws RecognitionException {
+		TacticContext _localctx = new TacticContext(_ctx, getState());
+		enterRule(_localctx, 10, RULE_tactic);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(55);
+			match(T__7);
+			setState(56);
+			tacticCall();
 			}
 		}
 		catch (RecognitionException re) {
@@ -398,7 +398,6 @@ public class characteristicaParser extends Parser {
 
 	public static class ArgContext extends ParserRuleContext {
 		public TerminalNode NAME() { return getToken(characteristicaParser.NAME, 0); }
-		public TerminalNode STATEMENT() { return getToken(characteristicaParser.STATEMENT, 0); }
 		public ArgContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -408,19 +407,12 @@ public class characteristicaParser extends Parser {
 	public final ArgContext arg() throws RecognitionException {
 		ArgContext _localctx = new ArgContext(_ctx, getState());
 		enterRule(_localctx, 12, RULE_arg);
-		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(57);
-			_la = _input.LA(1);
-			if ( !(_la==STATEMENT || _la==NAME) ) {
-			_errHandler.recoverInline(this);
-			}
-			else {
-				if ( _input.LA(1)==Token.EOF ) matchedEOF = true;
-				_errHandler.reportMatch(this);
-				consume();
+			{
+			setState(58);
+			match(NAME);
 			}
 			}
 		}
@@ -459,23 +451,23 @@ public class characteristicaParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(59);
+			setState(60);
 			arg();
-			setState(64);
+			setState(65);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,2,_ctx);
 			while ( _alt!=1 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1+1 ) {
 					{
 					{
-					setState(60);
-					match(COMMA);
 					setState(61);
+					match(COMMA);
+					setState(62);
 					arg();
 					}
 					} 
 				}
-				setState(66);
+				setState(67);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,2,_ctx);
 			}
@@ -493,23 +485,24 @@ public class characteristicaParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\17F\4\2\t\2\4\3\t"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\20G\4\2\t\2\4\3\t"+
 		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\3\2\3\2\3\2\3\2\3\2"+
-		"\6\2\30\n\2\r\2\16\2\31\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\4\3\4\3\4\3"+
-		"\4\3\4\3\5\3\5\3\5\3\5\3\6\3\6\3\6\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7"+
-		"\3\7\3\7\3\7\3\b\3\b\3\t\3\t\3\t\7\tA\n\t\f\t\16\tD\13\t\3\t\3B\2\n\2"+
-		"\4\6\b\n\f\16\20\2\3\3\2\r\16\2C\2\27\3\2\2\2\4\35\3\2\2\2\6#\3\2\2\2"+
-		"\b(\3\2\2\2\n,\3\2\2\2\f/\3\2\2\2\16;\3\2\2\2\20=\3\2\2\2\22\30\5\4\3"+
-		"\2\23\30\5\6\4\2\24\30\5\b\5\2\25\30\5\n\6\2\26\30\5\f\7\2\27\22\3\2\2"+
-		"\2\27\23\3\2\2\2\27\24\3\2\2\2\27\25\3\2\2\2\27\26\3\2\2\2\30\31\3\2\2"+
-		"\2\31\27\3\2\2\2\31\32\3\2\2\2\32\33\3\2\2\2\33\34\7\2\2\3\34\3\3\2\2"+
-		"\2\35\36\7\3\2\2\36\37\7\4\2\2\37 \7\16\2\2 !\7\4\2\2!\"\7\5\2\2\"\5\3"+
-		"\2\2\2#$\7\6\2\2$%\7\16\2\2%&\7\r\2\2&\'\7\5\2\2\'\7\3\2\2\2()\7\7\2\2"+
-		")*\7\16\2\2*+\7\5\2\2+\t\3\2\2\2,-\7\b\2\2-.\5\f\7\2.\13\3\2\2\2/\60\7"+
-		"\16\2\2\60\61\7\t\2\2\61\62\5\20\t\2\62\63\7\n\2\2\63\64\7\t\2\2\64\65"+
-		"\5\20\t\2\65\66\7\n\2\2\66\67\7\t\2\2\678\5\20\t\289\7\n\2\29:\7\5\2\2"+
-		":\r\3\2\2\2;<\t\2\2\2<\17\3\2\2\2=B\5\16\b\2>?\7\17\2\2?A\5\16\b\2@>\3"+
-		"\2\2\2AD\3\2\2\2BC\3\2\2\2B@\3\2\2\2C\21\3\2\2\2DB\3\2\2\2\5\27\31B";
+		"\7\2\30\n\2\f\2\16\2\33\13\2\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\4\3\4\3"+
+		"\4\3\4\3\4\3\5\3\5\3\5\3\5\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6"+
+		"\3\6\3\7\3\7\3\7\3\b\3\b\3\t\3\t\3\t\7\tB\n\t\f\t\16\tE\13\t\3\t\3C\2"+
+		"\n\2\4\6\b\n\f\16\20\2\2\2D\2\31\3\2\2\2\4\36\3\2\2\2\6$\3\2\2\2\b)\3"+
+		"\2\2\2\n-\3\2\2\2\f9\3\2\2\2\16<\3\2\2\2\20>\3\2\2\2\22\30\5\4\3\2\23"+
+		"\30\5\6\4\2\24\30\5\b\5\2\25\30\5\f\7\2\26\30\5\n\6\2\27\22\3\2\2\2\27"+
+		"\23\3\2\2\2\27\24\3\2\2\2\27\25\3\2\2\2\27\26\3\2\2\2\30\33\3\2\2\2\31"+
+		"\27\3\2\2\2\31\32\3\2\2\2\32\34\3\2\2\2\33\31\3\2\2\2\34\35\7\2\2\3\35"+
+		"\3\3\2\2\2\36\37\7\3\2\2\37 \7\4\2\2 !\7\17\2\2!\"\7\4\2\2\"#\7\5\2\2"+
+		"#\5\3\2\2\2$%\7\6\2\2%&\7\16\2\2&\'\7\r\2\2\'(\7\5\2\2(\7\3\2\2\2)*\7"+
+		"\7\2\2*+\7\16\2\2+,\7\5\2\2,\t\3\2\2\2-.\7\16\2\2./\7\b\2\2/\60\5\20\t"+
+		"\2\60\61\7\t\2\2\61\62\7\b\2\2\62\63\5\20\t\2\63\64\7\t\2\2\64\65\7\b"+
+		"\2\2\65\66\5\20\t\2\66\67\7\t\2\2\678\7\5\2\28\13\3\2\2\29:\7\n\2\2:;"+
+		"\5\n\6\2;\r\3\2\2\2<=\7\16\2\2=\17\3\2\2\2>C\5\16\b\2?@\7\20\2\2@B\5\16"+
+		"\b\2A?\3\2\2\2BE\3\2\2\2CD\3\2\2\2CA\3\2\2\2D\21\3\2\2\2EC\3\2\2\2\5\27"+
+		"\31C";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

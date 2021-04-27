@@ -51,18 +51,6 @@ public class characteristicaBaseListener implements characteristicaListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterTactic(characteristicaParser.TacticContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitTactic(characteristicaParser.TacticContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterAxiom(characteristicaParser.AxiomContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -82,6 +70,18 @@ public class characteristicaBaseListener implements characteristicaListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitTacticCall(characteristicaParser.TacticCallContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTactic(characteristicaParser.TacticContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTactic(characteristicaParser.TacticContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
