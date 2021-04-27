@@ -257,8 +257,6 @@ public class characteristicaParser extends Parser {
 			match(NAME);
 			setState(36);
 			match(STATEMENT);
-			setState(37);
-			match(T__2);
 			}
 		}
 		catch (RecognitionException re) {
@@ -286,11 +284,11 @@ public class characteristicaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(39);
+			setState(38);
 			match(T__4);
-			setState(40);
+			setState(39);
 			match(NAME);
-			setState(41);
+			setState(40);
 			match(T__2);
 			}
 		}
@@ -328,27 +326,27 @@ public class characteristicaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(43);
+			setState(42);
 			match(NAME);
+			setState(43);
+			match(T__5);
 			setState(44);
-			match(T__5);
-			setState(45);
 			((TacticCallContext)_localctx).variables = args();
+			setState(45);
+			match(T__6);
 			setState(46);
-			match(T__6);
+			match(T__5);
 			setState(47);
-			match(T__5);
-			setState(48);
 			((TacticCallContext)_localctx).requirements = args();
+			setState(48);
+			match(T__6);
 			setState(49);
-			match(T__6);
-			setState(50);
 			match(T__5);
-			setState(51);
+			setState(50);
 			((TacticCallContext)_localctx).results = args();
-			setState(52);
+			setState(51);
 			match(T__6);
-			setState(53);
+			setState(52);
 			match(T__2);
 			}
 		}
@@ -379,9 +377,9 @@ public class characteristicaParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(55);
+			setState(54);
 			match(T__7);
-			setState(56);
+			setState(55);
 			tacticCall();
 			}
 		}
@@ -411,7 +409,7 @@ public class characteristicaParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			{
-			setState(58);
+			setState(57);
 			match(NAME);
 			}
 			}
@@ -451,23 +449,23 @@ public class characteristicaParser extends Parser {
 			int _alt;
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(60);
+			setState(59);
 			arg();
-			setState(65);
+			setState(64);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,2,_ctx);
 			while ( _alt!=1 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1+1 ) {
 					{
 					{
-					setState(61);
+					setState(60);
 					match(COMMA);
-					setState(62);
+					setState(61);
 					arg();
 					}
 					} 
 				}
-				setState(67);
+				setState(66);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,2,_ctx);
 			}
@@ -485,24 +483,23 @@ public class characteristicaParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\20G\4\2\t\2\4\3\t"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\20F\4\2\t\2\4\3\t"+
 		"\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\3\2\3\2\3\2\3\2\3\2"+
 		"\7\2\30\n\2\f\2\16\2\33\13\2\3\2\3\2\3\3\3\3\3\3\3\3\3\3\3\3\3\4\3\4\3"+
-		"\4\3\4\3\4\3\5\3\5\3\5\3\5\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6"+
-		"\3\6\3\7\3\7\3\7\3\b\3\b\3\t\3\t\3\t\7\tB\n\t\f\t\16\tE\13\t\3\t\3C\2"+
-		"\n\2\4\6\b\n\f\16\20\2\2\2D\2\31\3\2\2\2\4\36\3\2\2\2\6$\3\2\2\2\b)\3"+
-		"\2\2\2\n-\3\2\2\2\f9\3\2\2\2\16<\3\2\2\2\20>\3\2\2\2\22\30\5\4\3\2\23"+
-		"\30\5\6\4\2\24\30\5\b\5\2\25\30\5\f\7\2\26\30\5\n\6\2\27\22\3\2\2\2\27"+
-		"\23\3\2\2\2\27\24\3\2\2\2\27\25\3\2\2\2\27\26\3\2\2\2\30\33\3\2\2\2\31"+
-		"\27\3\2\2\2\31\32\3\2\2\2\32\34\3\2\2\2\33\31\3\2\2\2\34\35\7\2\2\3\35"+
-		"\3\3\2\2\2\36\37\7\3\2\2\37 \7\4\2\2 !\7\17\2\2!\"\7\4\2\2\"#\7\5\2\2"+
-		"#\5\3\2\2\2$%\7\6\2\2%&\7\16\2\2&\'\7\r\2\2\'(\7\5\2\2(\7\3\2\2\2)*\7"+
-		"\7\2\2*+\7\16\2\2+,\7\5\2\2,\t\3\2\2\2-.\7\16\2\2./\7\b\2\2/\60\5\20\t"+
-		"\2\60\61\7\t\2\2\61\62\7\b\2\2\62\63\5\20\t\2\63\64\7\t\2\2\64\65\7\b"+
-		"\2\2\65\66\5\20\t\2\66\67\7\t\2\2\678\7\5\2\28\13\3\2\2\29:\7\n\2\2:;"+
-		"\5\n\6\2;\r\3\2\2\2<=\7\16\2\2=\17\3\2\2\2>C\5\16\b\2?@\7\20\2\2@B\5\16"+
-		"\b\2A?\3\2\2\2BE\3\2\2\2CD\3\2\2\2CA\3\2\2\2D\21\3\2\2\2EC\3\2\2\2\5\27"+
-		"\31C";
+		"\4\3\4\3\5\3\5\3\5\3\5\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6\3\6"+
+		"\3\7\3\7\3\7\3\b\3\b\3\t\3\t\3\t\7\tA\n\t\f\t\16\tD\13\t\3\t\3B\2\n\2"+
+		"\4\6\b\n\f\16\20\2\2\2C\2\31\3\2\2\2\4\36\3\2\2\2\6$\3\2\2\2\b(\3\2\2"+
+		"\2\n,\3\2\2\2\f8\3\2\2\2\16;\3\2\2\2\20=\3\2\2\2\22\30\5\4\3\2\23\30\5"+
+		"\6\4\2\24\30\5\b\5\2\25\30\5\f\7\2\26\30\5\n\6\2\27\22\3\2\2\2\27\23\3"+
+		"\2\2\2\27\24\3\2\2\2\27\25\3\2\2\2\27\26\3\2\2\2\30\33\3\2\2\2\31\27\3"+
+		"\2\2\2\31\32\3\2\2\2\32\34\3\2\2\2\33\31\3\2\2\2\34\35\7\2\2\3\35\3\3"+
+		"\2\2\2\36\37\7\3\2\2\37 \7\4\2\2 !\7\17\2\2!\"\7\4\2\2\"#\7\5\2\2#\5\3"+
+		"\2\2\2$%\7\6\2\2%&\7\16\2\2&\'\7\r\2\2\'\7\3\2\2\2()\7\7\2\2)*\7\16\2"+
+		"\2*+\7\5\2\2+\t\3\2\2\2,-\7\16\2\2-.\7\b\2\2./\5\20\t\2/\60\7\t\2\2\60"+
+		"\61\7\b\2\2\61\62\5\20\t\2\62\63\7\t\2\2\63\64\7\b\2\2\64\65\5\20\t\2"+
+		"\65\66\7\t\2\2\66\67\7\5\2\2\67\13\3\2\2\289\7\n\2\29:\5\n\6\2:\r\3\2"+
+		"\2\2;<\7\16\2\2<\17\3\2\2\2=B\5\16\b\2>?\7\20\2\2?A\5\16\b\2@>\3\2\2\2"+
+		"AD\3\2\2\2BC\3\2\2\2B@\3\2\2\2C\21\3\2\2\2DB\3\2\2\2\5\27\31B";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

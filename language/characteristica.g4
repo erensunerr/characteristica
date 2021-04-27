@@ -9,7 +9,7 @@ prog        :
 
 
 impr        :   'import' '"' lib=IMPR_NAME '"' ';';
-stat        :   'stat' NAME STATEMENT ';';
+stat        :   'stat' NAME STATEMENT;
 axiom       :   'axiom' NAME ';';
 
 tacticCall  :   NAME
@@ -25,7 +25,7 @@ args        :   arg (COMMA arg)*?;
 
 COMMENT     :   ('#' .+? '\r'? '\n') -> skip;
 WS          :   [ \t\n\r]+? -> skip;
-STATEMENT   :   '{' .*? '}';
+STATEMENT   :   '{' .*? '}' ';';
 NAME        :   [a-zA-Z][a-zA-Z._1-9]*;
 IMPR_NAME   :   [a-zA-Z][a-zA-Z._1-9/]*;
 COMMA       :   ',';
