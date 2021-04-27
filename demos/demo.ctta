@@ -1,0 +1,38 @@
+stat a.req1 {A + B = 7};
+stat a.req2 {B = 3};
+stat a.res1 {A = 4};
+
+tactic a(A, B) (
+    a.req1,
+    a.req2
+)(
+    a.res1
+);
+
+stat b.req1 {A = 4};
+stat b.res1 {B = 5};
+
+tactic b(A, B)(
+    b.req1
+)(
+    b.res1
+);
+
+stat stat1 {X + Y = 7};
+axiom stat1;
+stat stat2 {Y = 3};
+axiom stat2;
+stat a.endStat {X = 4};
+stat b.endStat {Y = 5};
+
+a(X, Y)(
+    stat1, stat2
+)(
+    a.endStat
+);
+
+b(X, Y)(
+    a.endStat
+)(
+    b.endStat
+);
