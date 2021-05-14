@@ -10,3 +10,10 @@ After installling python execute the following commands:
 
 You are ready to roll. I should probably write some sort of tutorial and documentation for it, 
 which I maybe will do if you bug me at gerensuner@gmail.com. Jokes aside, feel free to contact me.
+
+# Slides from my presentation
+
+I recently presented this project at University of Toronto (I built this in a research program for high school students there). 
+[Here](https://drive.google.com/file/d/1rRDJj6PKxu2Rz5MJi_4_rcJZVpLDzG-m/view?usp=sharing) are the slides.
+I'd suggest you check them out, because they have nice diagrams 
+and are pretty self-explanatory. If you have questions feel free to send them and I'll make an FAQ section.
